@@ -7,9 +7,11 @@ import Footer from './Components/Footer'
 const a = ReactDom.createRoot(document.getElementById('root'))
 
 a.render(
-  <div>
-    <Header></Header>
-    <Counter></Counter>
-    <Footer></Footer>
+  <div className="min-h-screen flex flex-col">
+    <Header />
+    <div className="flex-grow">
+      <Counter />
+    </div>
+    <Footer />
   </div>
 )
