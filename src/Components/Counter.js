@@ -2,21 +2,21 @@ import { useState } from 'react'
 
 const Counter = () => {
     const [number, func1] = useState(0)
-    const [touched, setTouched] = useState(false)
+    const [touched,func2] =useState(false)
 
     const change1 = () => {
         func1(number - 1)
-        setTouched(true)
+        func2(true)
     }
 
     const change2 = () => {
         func1(0)
-        setTouched(false)
+        func2(true)
     }
 
     const change3 = () => {
         func1(number + 1)
-        setTouched(true)
+        func2(true)
     }
 
     return (
@@ -28,14 +28,8 @@ const Counter = () => {
                     </div>
                 </div>
 
-                <span
-                    className={`flex justify-center items-center mb-5 h-[24px]
-                             ${touched
-                            ? (number === 0 ? "text-red-500" : "text-green-500")
-                            : "invisible"
-                        }`}
-                >
-                    {number === 0 ? "Minimum Limit Reached" : "Dashboard Active"}
+                <span className={`flex justify-center items-center pb-5 ${touched===true?(number===0?'text-red-500':'text-green-500'):'invisible'}`}>
+                    {number===0?'Minimum Limit Reached':"Cashboard Active"}
                 </span>
 
 
