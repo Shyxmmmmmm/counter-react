@@ -28,7 +28,7 @@ const Counter = () => {
                     </div>
                 </div>
 
-                <span className={`flex justify-center items-center pb-5 ${touched===true?(number===0?'text-red-500':'text-green-500'):'invisible'}`}>
+                <span className={`flex justify-center items-center text-center pb-5 ${touched===true?(number===0?'text-red-500':'text-green-500'):'invisible'}`}>
                     {number===0?'Minimum Limit Reached':"Cashboard Active"}
                 </span>
 
